@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+	<head>
+		<!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+		<meta charset="utf-8">
+		<title>hm21 : CSS3 advanced</title>
+		<style>
+				span{
+				transition: font-size 3s;
+			}
+			span:hover{
+				font-size:200%;
+			}
+			img{
+				position: absolute;
+				left: 250px;
+				top: 180px;
+			}
+			#background2{
+				z-index: -5;
+				left: 0px;
+				top: 0px;
+			}
+			#background{
+				z-index: -5;
+				left: 140px;
+				top: 90px;
+			}
+			#moon{
+				z-index: -5;
+				left: 110px;
+				top: 60px;
+
+			}
+			#santa{
+				z-index: -5;
+				left: 250px;
+				top: 50px;
+			}
+			#snowman{
+				
+				left: 530px;
+				top:470px;}
+			#family{
+				left: 145px;
+				top:460px;}
+			#ball{
+				left: 450px;
+				top:400px;}
+			#tree1{
+				left: 390px;
+				top:250px;}
+			#tree2{
+				left: 300px;
+				top:440px;
+			}
+			#star{
+				left: 310px;
+				top:330px;
+			}
+			#box{
+				left: 500px;
+				top:200px;
+			}
+			#snowman2{
+				left: 150px;
+				top:240px;
+			}
+			#star2{
+				left: 390px;
+				top:160px;
+			}
+			audio{
+				position: absolute;
+				left: 410px;
+				top: 60px;
+				width: 250px;
+    			height: 26px;}
+	
+				
+		div {
+				display: inline-block;
+				position: absolute; /* 절대 배치 */
+				border: 1px solid lightgray;
+			}
+			div > p1{
+				display: inline-block; /* div의 자식 p */
+				position:absolute;  /* 절대 배치 */
+				height: 20px;
+				width: 15px;
+				background:red			}
+			div > p2 {
+				display: inline-block; /* div의 자식 p */
+				position:absolute;  /* 절대 배치 */
+				height: 20px;
+				width: 15px;
+				background: skyblue		}
+				div > p3 {
+				display: inline-block; /* div의 자식 p */
+				position:absolute;  /* 절대 배치 */
+				height: 20px;
+				width: 15px;
+				background:orange;
+			}
+			div > p4{
+				display: inline-block; /* div의 자식 p */
+				position:absolute;  /* 절대 배치 */
+				height: 20px;
+				width: 15px;
+				background:yellow;
+			}
+			div > p5 {
+				display: inline-block; /* div의 자식 p */
+				position:absolute;  /* 절대 배치 */
+				height: 20px;
+				width: 15px;
+				background:green		}
+				div > p6{
+				display: inline-block; /* div의 자식 p */
+				position:absolute;  /* 절대 배치 */
+				height: 20px;
+				width: 15px;
+				background:purple;
+			}
+			div > p7{
+				display: inline-block; /* div의 자식 p */
+				position:absolute;  /* 절대 배치 */
+				height: 20px;
+				width: 15px;
+				background:darkcyan			}
+				div > p8{
+				display: inline-block; /* div의 자식 p */
+				position:absolute;  /* 절대 배치 */
+				height: 20px;
+				width: 15px;
+				background:pink;
+
+			}
+			div > p8 {
+				display: inline-block; /* div의 자식 p */
+				position:absolute;  /* 절대 배치 */
+				height: 20px;
+				width: 15px;
+				background:silver			}
+				div > p9{
+				display: inline-block; /* div의 자식 p */
+				position:absolute;  /* 절대 배치 */
+				height: 20px;
+				width: 15px;
+				background:lightpink;
+			}
+			div > p10{
+				display: inline-block; /* div의 자식 p */
+				position:absolute;  /* 절대 배치 */
+				height: 20px;
+				width: 15px;
+				background:lightseagreen			}
+				
+	
+			#fixed2 {
+				position: absolute;
+				top: 680px;
+				left: 590px;
+				width: 100px;
+				padding: 5px;
+				background: yellow;
+				color: black;
+			}
+	
+
+		</style>
+		<script></script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<h3>Merry Christmas!</h3>
+		<hr>
+		<div>	
+			<img id="background2"src="media/background2.png"
+			width="800" height="700"alt="크리스마스 배경2">
+			<img id="background"src="media/background.png"
+			width="550" height="550"alt="크리스마스 배경">
+		<img src="media/christmastree.png"
+		width="380" height="450"alt="크리스마스 트리">
+		<img id = "moon" src="media/moon.png"
+		 width="150" height="150" alt="달">
+		 <img id = "santa" src="media/santa.png"
+		 width="150" height="150" alt="산타">
+		 <img id = "snowman" src="media/snowman.png"
+		 width="160" height="160" alt="눈사람">
+		 <img id = "family" src="media/family.png"
+		 width="160" height="160" alt="가족">
+		 <img id = "ball" src="media/ball.png"
+		 width="140" height="200" alt="트리장식">
+		 <img id = "tree1" src="media/tree1.png"
+		 width="100" height="100" alt="트리장식1">
+		 <img id = "tree2" src="media/tree2.png"
+		 width="100" height="100" alt="트리장식2">
+		 <img id = "star" src="media/star.png"
+		 width="240" height="100" alt="트리장식3">
+		 <img id = "box" src="media/box.png"
+		 width="150" height="100" alt="선물박스">
+		 <img id = "snowman2" src="media/snowman2.png"
+		 width="150" height="150" alt="선물박스">
+		 <img id = "star2" src="media/star2.png"
+		 width="100" height="100" alt="트리장식4">
+	
+
+		<p1 style="left:140px; top:70px">M</p1>
+		<p2 style="left:155px; top:70px">E</p2>
+		<p3 style="left:170px; top:70px">R</p3>
+		<p4 style="left:185px; top:70px">R</p4>
+		<p5 style="left:200px; top:70px">Y</p5>
+		<p6 style="left:230px; top:70px">X</p6>
+		<p7 style="left:245px; top:70px">-</p7>
+		<p8 style="left:260px; top:70px">M</p8>
+		<p9 style="left:275px; top:70px">A</p9>
+		<p10 style="left:290px; top:70px">X</p10>
+		<audio src="media/music.mp3" controls autoplay>
+		</audio>
+	</div>
+		<div id="fixed">
+
+		</div>
+		<div id="fixed2">
+			<span>hm21, 정지원</span>
+		</div>
+	</body>
+
+</html>
+
