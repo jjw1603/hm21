@@ -5,3 +5,5 @@
 - span을 사용해서 이름에 마우스를 갖다대면 글자의 크기가 커짐
 - 효과 음악을 다운받아서 media folder에 저장해서 audio src를 사용. position을 사용해서 배치.controls autoplay를 사용해서 저절로 시작되고 반복 재생한다
 - 카드의 테두리,배경,음악을 media folder에 저장해서 사용함.
+## 제출일
+> 04.25
