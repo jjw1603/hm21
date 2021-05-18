@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm21 : Javascript object</title>
+    <style></style>
+    <script>
+      //리터럴 표기법(json)으로 사용자 객체 만들기
+      function fill() {
+        return (this.amount += 1);
+      }
+      function consume() {
+        return (this.amount -= 1);
+      }
+
+      var box = new Object();
+      box.color = "red";
+      box.size = 10;
+      box.amount = 0;
+      box.fill = fill;
+      box.consume = consume;
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>new Object()로 사용자 객체 만들기</h3>
+    <hr />
+    <script>
+      var user = prompt(" 깜짝퀴즈!!박스의 초기 amount 값을 예측해 보세요!", 0);
+      if (user == null) {
+        document.write("종료합니다");
+      } else {
+        document.write("Box: ");
+        document.write(box.color + ",");
+        document.write(box.size + ",");
+        document.write(box.amount + "<br>" + "<hr>");
+
+        document.write("Box-Color: " + box.color + "<br>");
+        document.write("Box-Size: " + box.size + "<br>");
+        document.write("Box-Amount: " + box.amount + "<br>" + "<hr>");
+
+        box.fill();
+        document.write(
+          "documnet.write()로 amount 프로퍼티 값 호출 " + box.fill() + "<br>"
+        );
+        box.consume();
+        document.write(
+          "documnet.write()로 amount 프로퍼티 값 호출 " +
+            box.consume() +
+            "<br>" +
+            "<hr>"
+        );
+
+        if (user == 0) document.write("깜짝퀴즈 결과!!" + "<br>" + "정답!");
+        else
+          document.write(
+            "깜짝퀴즈 결과!!" + "<br>" + "아닙니다! 답은 0입니다."
+          );
+        if (user == 0) document.body.style.backgroundColor = "lightyellow";
+        else document.body.style.backgroundColor = "lightskyblue";
+      }
+    </script>
+  </body>
+</html>

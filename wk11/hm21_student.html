@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm22 : Javascript object</title>
+    <style></style>
+    <script>
+      // 사용자 객체 만들기
+      var now = new Date();
+      var student = {
+        id: "hm21",
+        Age: function() {
+          return now.getFullYear() - this.birthyear + 1;
+        },
+        name: "정지원",
+        number: "01099581603",
+        birthyear: 1999,
+        birthmonth: 6,
+        birthday: 18
+      };
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>리터럴 표기법으로 사용자 객체 만들기</h3>
+    <hr />
+    <script>
+      // 객체 활용
+      document.write("student id: " + student.id + "<br>");
+      document.write("hm21's age: " + student.Age() + "<br>");
+      document.write(
+        "hm21's birth:" +
+          student.birthyear +
+          "년 " +
+          student.birthmonth +
+          "월 " +
+          student.birthday +
+          "일" +
+          "<br>"
+      );
+      document.write("hm21's name: " + student.name + "<br>");
+      document.write("hm21's number: " + student.number + "<br>");
+    </script>
+  </body>
+</html>
