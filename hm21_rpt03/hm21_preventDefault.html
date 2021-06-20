@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm21 : Javascript Event</title>
+    <style></style>
+    <script>
+      function query() {
+        var ret = confirm("음악을 들으러 가겠습니까?");
+        return ret;
+        // confirm()의 리턴 값은 true 또는 false
+      }
+
+      function noAction(e) {
+        e.preventDefault();
+        // 이벤트의 디폴트 행동 강제취소
+      }
+      function query1() {
+        var ret = confirm("날씨를 보러 가시겠습니까?");
+        return ret;
+        // confirm()의 리턴 값은 true 또는 false
+      }
+
+      function noAction(e) {
+        e.preventDefault();
+        // 이벤트의 디폴트 행동 강제취소
+      }
+      function query2() {
+        var ret = confirm("인제정보시스템으로 이동하시겠습니까?");
+        return ret;
+        // confirm()의 리턴 값은 true 또는 false
+      }
+
+      function noAction(e) {
+        e.preventDefault();
+        // 이벤트의 디폴트 행동 강제취소
+      }
+      function query3() {
+        var ret = confirm("고속도로 교통상황을 보러 이동하시겠습니까?");
+        return ret;
+        // confirm()의 리턴 값은 true 또는 false
+      }
+
+      function noAction(e) {
+        e.preventDefault();
+        // 이벤트의 디폴트 행동 강제취소
+      }
+      function query4() {
+        var ret = confirm("Git hub로 이동하시겠습니까?");
+        return ret;
+        // confirm()의 리턴 값은 true 또는 false
+      }
+
+      function noAction(e) {
+        e.preventDefault();
+        // 이벤트의 디폴트 행동 강제취소
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <div><span id="div"style="background-color:skyblue">자주 사용하는 사이트 </div></span>
+    <script>
+			var div=document.getElementById("div");
+			var timerID=setInterval("doRotate()",200);
+
+			div.onclick=function(e){
+				clearInterval(timerID);
+			}
+
+			function doRotate(){
+				var str=div.innerHTML;
+				var firstChar = str.substr(0,1);
+				var remains=str.substr(1,str.length-1);
+				str=remains+firstChar;
+				div.innerHTML=str;
+			}
+		</script>
+    <hr />
+    <a href="https://www.melon.com" onclick="return query()">
+      Melon으로 이동할 지 물어보는 링크</a>
+    <hr />
+    <hr />
+    <a href="https://www.weather.go.kr" onclick="return query1()">
+      기상청으로 이동할 지 물어보는 링크</a>
+    <hr />
+    <hr />
+    <a href="https://web.inje.ac.kr" onclick="return query2()">
+      인제정보시스템으로 이동할 지 물어보는 링크</a>
+    <hr />
+    <hr />
+    <a href="http://www.roadplus.co.kr/main/main.do" onclick="return query3()">
+      ROADPLUS로 이동할 지 물어보는 링크</a>
+    <hr />
+    <hr />
+    <a href="https://github.com/redwoods" onclick="return query4()">
+      Redwoods github로 이동할 지 물어보는 링크</a>
+    <hr />
+    <script>function load(){
+      var select = document.getElementById("site");
+      window.location=select.options[select.selectedIndex].value;
+    }</script>
+  <h3>  window.location으로 유용한 웹 사이트 접속</h3>
+  
+    <hr />
+    사이트 선택 :
+    <select id="site">
+      <option value="http://www.naver.com" selected>네이버 </option>
+      <option value="http://www.google.com">구글 </option>
+      <option value="http://www.microsoft.com">마이크로소프트 </option>
+    </select>
+    <p>
+      <button onclick="load()">웹 사이트 접속</button>
+    </p>
+    <script>
+      function load1(URL){
+        window.open(URL,"myWin","left=300,top=300,width=400,height=300");
+      }
+    </script>
+    <h3>window.open()으로 자주하는 게임 윈도우 열기</h3>
+    <hr>
+    <a href="javascript:load1('https://sa.nexon.com/main/index.aspx')">
+    서든어택 홈페이지</a><br>
+    <a href="javascript:load1('https://pubg.game.daum.net/pubg/index.daum')">
+    배틀그라운드 홈페이지</a><br>
+    <a href="javascript:load1('http://fifaonline4.nexon.com/main/index')">
+     피파 홈페이지</a><br>
+ 
+    <p><a href="javascript:window.print()">
+      이곳을 누르면 프린트 됩니다.
+    </a></p>
+    <intput type="button" value="프린트"
+    onclick="window.print()"></intput>
+  </body>
+</html>
