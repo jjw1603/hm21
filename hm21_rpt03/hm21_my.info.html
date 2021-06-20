@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>hm21 </title>
+		<style>
+		</style>
+		<script></script>
+	</head>
+
+	<body>
+		<!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+		<div><span id="div"style="background-color:yellow">나는 누구인가?</span></div>
+		<script>
+			var div=document.getElementById("div");
+			var timerID=setInterval("doRotate()",200);
+
+			div.onclick=function(e){
+				clearInterval(timerID);
+			}
+
+			function doRotate(){
+				var str=div.innerHTML;
+				var firstChar = str.substr(0,1);
+				var remains=str.substr(1,str.length-1);
+				str=remains+firstChar;
+				div.innerHTML=str;
+			}
+		</script>
+		<hr>
+		<div style="background-color:skyblue; padding:20px;">
+            이름:정지원<br><br>
+            나이:23<br><br>
+            생년월일:1999.06.18<br><br>
+            학교:인제대학교  <a href="https://www.inje.ac.kr/kor/main/main.asp"> 인제대학교 홈페이지</a><br><br>
+            학번:20182578<br><br>     
+            거주지:창원<br><br>
+            졸업한 고등학교: 창원 경일고등학교<a href=https://ko.wikipedia.org/wiki/%EC%B0%BD%EC%9B%90%EA%B2%BD%EC%9D%BC%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90> 학교소개</a><br><br> 
+            졸업한 중학교: 웅남중학교 <a href="http://ungnam-m.gne.go.kr/ungnam-m/main.do"> 학교 홈페이지</a><br><br>
+            졸업한 초등학교: 웅남초등학교 <a href="https://ko.wikipedia.org/wiki/%EC%9B%85%EB%82%A8%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90"> 학교소개</a><br><br>
+			<h3>프린트</h3>
+			<p><a href="javascript:window.print()">
+				이곳을 누르면 프린트 됩니다.
+			</a></p>
+			<intput type="button" value="프린트"
+			onclick="window.print()"></intput>
+		</div>
+	</body>
+
+</html>

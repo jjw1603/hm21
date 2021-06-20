@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- 이 부분은 주석문입니다. 웹 브라우저는 주석을 화면에 출력하지 않습니다. -->
+<html>
+  <head>
+    <!-- 문서제목, 자바스크립트 코드, CSS 스타일 정의, 메타데이터정의 -->
+    <meta charset="utf-8" />
+    <title>hm21 : Javascript Event</title>
+    <style></style>
+    <script>
+      function showImage() {
+        var sel = document.getElementById("fruits");
+        var img = document.getElementById("fruitimage");
+        img.src = sel.options[sel.selectedIndex].value;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- 문서의 본문 텍스트, 이미지, 테이블, 자바스크립트 코드, 동영상 등 -->
+    <h3>select 객체에서 선택한 음식 출력</h3>
+    <hr />
+    음식을 선택하면 음식의 사진이 출력.
+    <script>function hideMenu(){
+      alert("오른쪽 클릭<컨텍스트 메뉴>금지");
+      return false;
+    }
+    document.oncontextmenu=hideMenu;</script>
+    <p></p>
+    <form>
+      <select id="fruits"  onchange="showImage()">
+        <option value="media2/chicken.png">치킨 </option>
+        <option value="media2/pizza.jpg" >피자 </option>
+        <option value="media2/pasta.jpg"> 파스타</option></select>
+      <img id="fruitimage" src="media2/chicken.png" alt="" />
+    </form>
+  </body>
+</html>
